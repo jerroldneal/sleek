@@ -120,6 +120,7 @@
     "artifactName": "${productName}-${version}-${arch}.${ext}"
   },
   "scripts": {
+    "build:windows": "yarn build:css && yarn build:pegjs && electron-builder -w --publish never",
     "build:mas": "yarn build:css && yarn build:pegjs && electron-builder -m mas --universal --publish never && bash build/resignPkg.sh",
     "build:macos": "yarn build:css && yarn build:pegjs && electron-builder -m zip --universal --publish never && bash build/resignPkg.sh",
     "build:appx": "yarn build:css && yarn build:pegjs && electron-builder -w appx --publish never",
